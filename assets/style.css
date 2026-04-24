@@ -469,8 +469,10 @@ a {
   margin-bottom: -0.75rem;
   z-index: 1;
 }
-.reward-card__trophy-wrap--large {
-  margin-bottom: 1rem;
+@media (min-width: 768px) {
+  .reward-card__trophy-wrap--large {
+    margin-bottom: 1rem;
+  }
 }
 .reward-card__trophy-glow {
   position: absolute;
@@ -499,9 +501,13 @@ a {
   transition: transform 0.3s ease;
 }
 .reward-card__trophy--large {
-  width: 12rem;
-  height: 12rem;
   filter: drop-shadow(0 0 30px rgba(245, 180, 60, 0.6));
+}
+@media (min-width: 768px) {
+  .reward-card__trophy--large {
+    width: 12rem;
+    height: 12rem;
+  }
 }
 .reward-card:hover .reward-card__trophy {
   transform: scale(1.1);
@@ -532,7 +538,11 @@ a {
     var(--gold-800)
   );
   box-shadow: 0 0 40px rgba(245, 180, 60, 0.3);
-  max-width: 400px;
+}
+@media (min-width: 768px) {
+  .reward-card__frame--gold {
+    max-width: 400px;
+  }
 }
 .reward-card--first:hover .reward-card__frame--gold {
   box-shadow: 0 0 60px rgba(245, 180, 60, 0.5);
@@ -556,7 +566,11 @@ a {
 }
 .reward-card__inner--gold {
   background: linear-gradient(180deg, #1a120a, #000, #120a05);
-  padding: 2rem;
+}
+@media (min-width: 768px) {
+  .reward-card__inner--gold {
+    padding: 2rem;
+  }
 }
 
 /* Corner ornaments (gold card only) */
@@ -622,11 +636,15 @@ a {
   margin-bottom: 1.5rem;
 }
 .reward-card__title--gold {
-  font-size: 1.5rem;
   background: linear-gradient(180deg, #fff, var(--gold-200));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+@media (min-width: 768px) {
+  .reward-card__title--gold {
+    font-size: 1.5rem;
+  }
 }
 
 .reward-card__img-wrap {
@@ -638,9 +656,11 @@ a {
   position: relative;
   margin-top: auto;
 }
-.reward-card__img-wrap--large {
-  height: 20rem;
-  margin-bottom: 2rem;
+@media (min-width: 768px) {
+  .reward-card__img-wrap--large {
+    height: 20rem;
+    margin-bottom: 2rem;
+  }
 }
 .reward-card__img-glow {
   position: absolute;
@@ -667,12 +687,20 @@ a {
   transition: transform 0.3s ease;
 }
 .reward-card__img--large {
-  transform: scale(1.25);
   filter: drop-shadow(0 10px 30px rgba(245, 180, 60, 0.4));
 }
-.reward-card:hover .reward-card__img,
-.reward-card:hover .reward-card__img--large {
+@media (min-width: 768px) {
+  .reward-card__img--large {
+    transform: scale(1.25);
+  }
+}
+.reward-card:hover .reward-card__img {
   transform: scale(1.1);
+}
+@media (min-width: 768px) {
+  .reward-card:hover .reward-card__img--large {
+    transform: scale(1.35);
+  }
 }
 
 .reward-card__note {
